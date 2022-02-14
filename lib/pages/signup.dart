@@ -1,11 +1,12 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:lottie/lottie.dart';
 
 import 'package:vpn/constants/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:vpn/pages/signup.dart';
 
-class Splash extends StatelessWidget {
-  const Splash({Key? key}) : super(key: key);
+class SignUp extends StatelessWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,16 +37,14 @@ class Splash extends StatelessWidget {
               height: 300,
               child: Stack(alignment: Alignment.center,
               children: [
-                Column(children: [const SizedBox(height: 130,),
-                  Image.asset("assets/rocket.png",height:140,),],),
+                Column(children: [const SizedBox(height: 40,),
+                  Image.asset("assets/rocket.png",height:190,),],),
 
                 const Positioned(top:1,left: 150, child: Icon(Icons.circle,color: Colors.white,size: 10,),),
                 const Positioned(top:30,left: 24,child: Icon(Icons.star,color: Colors.white,size: 15)),
-                const Positioned(top:60,left: 270,child: Icon(Icons.circle,color: Colors.white,size: 10)),
-                const Positioned(top:120,left: 44, child:  Icon(Icons.circle,color: Colors.white,size: 15)),
-                const Positioned(top:140,right: 60, child:  Icon(Icons.star,color: Colors.white,size: 19,)),
-                const Positioned(top:250,left: 10,child: Icon(Icons.circle,color: Colors.white,size: 10)),
-                const Positioned(bottom:0,right: 11,child: Icon(Icons.circle,color: Colors.white,size: 15)),
+                const Positioned(top:250,left: 20, child:  Icon(Icons.star,color: Colors.white,size: 30)),
+                const Positioned(top:140,right: 60, child:  Icon(Icons.circle,color: Colors.white,size: 6,)),
+                const Positioned(bottom:50,right: 23,child: Icon(Icons.circle,color: Colors.white,size: 14)),
 
               ],
             ),),
@@ -65,9 +64,7 @@ class Splash extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       primary: btColor,elevation: 0,
                   textStyle: const TextStyle(fontSize: 20)),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const SignUp()));
-                  },
+                  onPressed: () {},
                   child: const Padding(
                     padding: EdgeInsets.all(14.0),
                     child: Text('Get Started',style: TextStyle(fontSize: 20),),
