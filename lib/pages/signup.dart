@@ -34,7 +34,7 @@ class SignUp extends StatelessWidget {
               children: [
 
             Container(
-              color: Colors.black,
+              // color: Colors.black,
               width: MediaQuery.of(context).size.width,
               height: 290,
               child: Stack(alignment: Alignment.center,
@@ -75,32 +75,68 @@ class SignUp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25)
                 )
               ),
-            ).px(37)
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
-            //   child: Text("VPN",style: styleOne,textAlign:TextAlign.center,),
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 25),
-            //   child: Text("We created a very cool VPN and can make your internet speed faster and safer",style: styleTwo,textAlign:TextAlign.center),
-            // ),
-            // SizedBox(
-            //   width: MediaQuery.of(context).size.width,
-            //   child: Padding(
-            //     padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
-            //     child: ElevatedButton(
-            //       style: ElevatedButton.styleFrom(
-            //           primary: btColor,elevation: 0,
-            //       textStyle: const TextStyle(fontSize: 20)),
-            //       onPressed: () {},
-            //       child: const Padding(
-            //         padding: EdgeInsets.all(14.0),
-            //         child: Text('Get Started',style: TextStyle(fontSize: 20),),
-            //       ),
+            ).px(39),
+            TextFormField(
+              keyboardType: TextInputType.phone,
+              cursorColor: btColor,
+              cursorHeight: 25,
+              style: TextStyle(
+                fontSize: 20
+              ),
+              decoration: InputDecoration(
+                hintText: "Mobile Number",
+                hintStyle: TextStyle(
+                  fontSize: 22,
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25)
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25)
+                )
+              ),
+            ).px(39),
+            TextFormField(
+              keyboardType: TextInputType.number,
+              cursorColor: btColor,
+              cursorHeight: 25,
+              style: TextStyle(
+                fontSize: 20
+              ),
+              decoration: InputDecoration(
+                hintText: "OTP",
+                hintStyle: TextStyle(
+                  fontSize: 22,
+                ),
+                filled: true,
+                fillColor: Colors.white,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25)
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25)
+                )
+              ),
+            ).px(39),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: btColor,elevation: 0,
+                  textStyle: const TextStyle(fontSize: 20)),
+                  onPressed: () {},
+                  child: const Padding(
+                    padding: EdgeInsets.all(14.0),
+                    child: Text('Sign Up',style: TextStyle(fontSize: 20),),
+                  ),
 
-            //     ),
-            //   ),
-            // )
+                ),
+              ),
+            )
 
           ]),
         ),
