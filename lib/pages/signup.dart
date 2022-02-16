@@ -2,6 +2,7 @@
 import 'package:vpn/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:vpn/pages/home.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -125,7 +126,9 @@ class SignUp extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         primary: btColor,elevation: 0,
                     textStyle: const TextStyle(fontSize: 20)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                    },
                     child: const Padding(
                       padding: EdgeInsets.all(14.0),
                       child: Text('Sign Up',style: TextStyle(fontSize: 20),),
