@@ -183,7 +183,33 @@ class _HomeState extends State<Home> {
 
         ],
       ),
-      drawer: const Drawer(),
+      drawer: Drawer(
+        child: SafeArea(
+          child: ListView(
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(color: Colors.grey.shade200,borderRadius: BorderRadius.circular(4)),
+                child: UserAccountsDrawerHeader(
+                  decoration: BoxDecoration(color: Colors.grey.shade100,borderRadius: BorderRadius.circular(4)),
+                  currentAccountPicture: CircleAvatar(),
+                  accountName: "John".text.xl2.black.make(),
+                  accountEmail: "john2929@gamil.com".text.xl.black.make()
+                  )
+                ).p(8).h(230),
+                ListTile(
+                 leading: Icon(Icons.person,color: Colors.black,size: 30,), 
+                 title: "Profile".text.xl.make(),
+                 tileColor: Colors.grey.shade300,
+                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                 trailing: Icon(Icons.chevron_right_sharp,size: 30,color: Colors.black,),
+                 onTap: (){
+                   
+                 },
+                ).px(8)
+            ],
+          )
+        ),
+      ),
     );
   }
 }
