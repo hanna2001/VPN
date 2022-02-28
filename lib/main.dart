@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:vpn/pages/connect.dart';
 import 'package:vpn/pages/splash.dart';
+import 'package:vpn/pages/subscription.dart';
 
 
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: Subscription(),
     );
   }
 }
